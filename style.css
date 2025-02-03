@@ -1,0 +1,89 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body::before, body::after {
+    content: "✨🌸💖";
+    font-size: 2.5em;
+    position: absolute;
+    opacity: 0.4;
+    animation: float 3s infinite alternate ease-in-out;
+}
+.heading{
+    background-color:rgb(112, 211, 250);
+    height: 70px;
+    font-family: 'Courier New',Cursive;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.todo-list{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+    gap: 10px;
+    margin-top: 20px;
+}
+.todo{
+    display: flex;
+    justify-content: space-between;
+    width: 500px;
+    padding: 10px;
+    border: 1px solid black;
+    border-radius: 10px;
+    background-color: rgb(244, 164, 164);
+    gap: 10px;
+}
+.todo button{
+    background-color: rgb(95, 95, 134);
+    border: 1px solid rgb(103, 160, 70);
+    padding: 5px;
+    border-radius: 5px;
+    color:aliceblue;
+}
+.add-todo{
+    width: 100%;
+    justify-content: center;
+    position: fixed;
+    display: flex;
+    bottom: 0px;
+    align-items: center;
+    gap: 10px;
+    background-color:rgb(145, 204, 255);
+    padding: 20px;
+}
+.add-todo input{
+    width: 300px;
+    height: 30px;
+    padding: 10px;
+    font-size: 16px;
+}
+.add-todo button{
+    height: 30px;
+    width: 50px;
+    background-color: rgb(95, 95, 134);
+    border: 1px solid black;
+    border-radius: 10px;
+    color:aliceblue;
+}
+button::after {
+    content: "✨";
+    position: absolute;
+    left: 10px;
+    top: 10px;
+    font-size: 1.5em;
+    opacity: 0;
+    transition: opacity 0.3s;
+}
+
+button:hover::after {
+    opacity: 1;
+}
+
+.completed {
+    text-decoration: line-through;
+    color:rgb(136, 184, 226);
+           }
